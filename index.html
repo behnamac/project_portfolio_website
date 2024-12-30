@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Travel Site</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">BS</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#travel">Bucketlist</a>
+        <a href="#favoarite">Other Hobbies</a>
+        <a href="#contact" class="contact-btn">CONTACT ME</a>
+      </nav>
+      <!-- Hamburger Menu -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Hi, my name is Behnam</h1>
+        <p>I'm a passionate web developer</p>
+        <button class="video-btn">Watch My Video</button>
+      </div>
+    </section>
+
+    <section class="travel" id="travel">
+      <h2>
+        Exploring the world is my passion.<br />I find joy in every journey.
+      </h2>
+      <div class="travel-images">
+        <img src="./assets/images/Eiffel Tower.jpg" alt="Eiffel Tower" />
+        <img src="./assets/images/Barcelona.jpg" alt="Barcelona" />
+        <img src="./assets/images/Lisbon.jpg" alt="Lisbon" />
+        <img src="./assets/images/London.jpg" alt="London" />
+        <img src="./assets/images/Prague.jpg" alt="Prague" />
+        <img src="./assets/images/Berlin.jpg" alt="Berlin" />
+      </div>
+      <figcaption>
+        These are the destinations I dream of visiting, each with its own unique
+        charm and adventure.
+      </figcaption>
+    </section>
+    <section class="favorites">
+      <div class="other-favorites">
+        <h2>
+          When I'm not traveling,<br />
+          I enjoy pursuing other creative passions, like:
+        </h2>
+        <ul>
+          <li>Cats</li>
+          <li>Video Games</li>
+          <li>Movies</li>
+          <li>Books</li>
+        </ul>
+      </div>
+      <div class="favorite-item" id="favoarite">
+        <img src="./assets/images/cat.jpg" alt="Cat" />
+        <figcaption>
+          Cats are my favorites! They are cute and adorable.
+        </figcaption>
+      </div>
+    </section>
+
+    <section class="travel-checklist">
+      <h2>Essential Travel Checklist:</h2>
+      <ul>
+        <li>
+          <label>
+            <input type="checkbox" name="checklist" value="passport" checked />
+            Passport
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="checklist" value="travel-insurance" />
+            Travel Insurance
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="checklist" value="comfortable-shoes" />
+            Comfortable Shoes
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="checklist" value="camera" /> Camera
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="checkbox" name="checklist" value="guidebook" />
+            Guidebook
+          </label>
+        </li>
+      </ul>
+      <img
+        src="./assets/images/The Plan before the Adventure.jpg"
+        alt="travel-list"
+      />
+    </section>
+    <section class="chat-form" id="contact">
+      <h2>Let's Have a Chat!</h2>
+      <p>I'd love to hear from you. Tell me about your passion!</p>
+      <form action="#" method="POST">
+        <label for="name">Your Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="email">Your Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="passion">What is your passion?</label>
+        <textarea
+          id="passion"
+          name="passion"
+          rows="4"
+          placeholder="Tell me about what excites you"
+          required
+        ></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+      <div id="successMessage" class="success-message" style="display: none">
+        Thank you! Your message has been successfully sent.
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Developed by Behnam &copy; 2024</p>
+    </footer>
+    <button id="scrollToTop" class="scroll-to-top">↑</button>
+    <script src="script.js"></script>
+  </body>
+</html>
