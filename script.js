@@ -1,50 +1,60 @@
-// JavaScript for interactivity
-
-// Handle "Watch my video" button click
-document.querySelector(".video-btn").addEventListener("click", () => {
-  alert("This feature is under construction. Stay tuned!");
-});
-
-// Scroll to contact section
 const contactBtn = document.querySelector(".contact-btn");
 contactBtn.addEventListener("click", () => {
   alert("send email to behnam.sep@gmail.com");
 });
 
-// Toggle favorite list items
 const favoriteItems = document.querySelectorAll(".other-favorites ul li");
-// Add event listeners to each list item
-favoriteItems.forEach((item) => {
-  item.addEventListener("mouseover", () => {
-    const key = item.textContent.trim(); // Get the text of the hovered item
-    if (favoriteData[key]) {
-      favoriteImage.src = favoriteData[key].src;
-      favoriteCaption.textContent = favoriteData[key].caption;
-    }
-  });
-});
 const favoriteImage = document.querySelector(".favorite-item img");
 const favoriteCaption = document.querySelector(".favorite-item figcaption");
 
-// Map of items to their corresponding images and captions
 const favoriteData = {
   Cats: {
-    src: "./assets/images/cat.jpg",
+    src: "https://images.unsplash.com/photo-1472491235688-bdc81a63246e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     caption: "Cats are my favorites! They are cute and adorable.",
   },
   "Video Games": {
-    src: "./assets/images/video-game.jpg",
+    src: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     caption: "Gaming is my way of unwinding and exploring new worlds.",
   },
   Movies: {
-    src: "./assets/images/movies.jpg",
+    src: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     caption: "Movies inspire me with their stories and visuals.",
   },
   Books: {
-    src: "./assets/images/books.jpg",
+    src: "https://images.unsplash.com/photo-1491841573634-28140fc7ced7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     caption: "Books open up endless possibilities and knowledge.",
   },
 };
+
+let currentIndex = 0;
+const intervalTime = 5000; 
+
+const updateFavorite = (index) => {
+  favoriteItems.forEach((item) => item.classList.remove("active"));
+
+  const currentItem = favoriteItems[index];
+  currentItem.classList.add("active");
+
+  const key = currentItem.textContent.trim();
+  if (favoriteData[key]) {
+    favoriteImage.src = favoriteData[key].src;
+    favoriteCaption.textContent = favoriteData[key].caption;
+  }
+};
+
+const startAutoCycle = () => {
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % favoriteItems.length; 
+    updateFavorite(currentIndex);
+  }, intervalTime);
+};
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  updateFavorite(currentIndex);
+  startAutoCycle(); 
+});
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
@@ -55,28 +65,23 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburger.classList.toggle("open");
   });
 });
-// Get form and success message elements
+
 const contactForm = document.getElementById("contact");
 const successMessage = document.getElementById("successMessage");
 
-// Handle form submission
 contactForm.addEventListener("submit", (event) => {
-  event.preventDefault(); // Prevent the form from refreshing the page
+  event.preventDefault(); 
   console.log("Form submitted!");
 
-  // Show the success message
   successMessage.style.display = "block";
 
-  // Hide the success message after 5 seconds (optional)
   setTimeout(() => {
     successMessage.style.display = "none";
   }, 5000);
 });
 
-// Get the Scroll to Top button
 const scrollToTopButton = document.getElementById("scrollToTop");
 
-// Show or hide the button based on scroll position
 window.addEventListener("scroll", () => {
   if (window.scrollY > 300) {
     scrollToTopButton.style.display = "flex";
@@ -85,10 +90,9 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Scroll to the top when the button is clicked
 scrollToTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
-    behavior: "smooth", // Smooth scrolling
+    behavior: "smooth", 
   });
 });

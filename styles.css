@@ -1,4 +1,3 @@
-/* General Styles (Mobile-First) */
 body {
   margin: 0;
   padding: 0;
@@ -90,8 +89,8 @@ header .logo {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url("./assets/images/laptop.jpg") no-repeat center center/cover;
-  height: 50vh;
+  background: url("https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center/cover;
+  height: 45vh;
   color: #fff;
 }
 .hero h1 {
@@ -101,17 +100,16 @@ header .logo {
   font-size: 1.2rem;
   margin: 2rem;
 }
-
-.video-btn {
+.hero-content .video-btn {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.8rem;
   background-color: #f0572b;
   color: #fff;
-  font-size: medium;
-  font-weight: 600;
-  padding: 0.8rem;
-  text-align: center;
+  font-size: 0.8rem;
+  border: none;
   border-radius: 30px;
+  cursor: pointer;
 }
-
 .travel,
 .favorites,
 .travel-checklist {
@@ -127,18 +125,53 @@ header .logo {
 
 .travel-images {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
 }
 
 .travel-images img {
   width: 100%;
-  border-radius: 8px;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .travel-images img:hover {
-transition: transform 0.3s ease-in-out; 
-transform: scale(1.1);
+  opacity: 0.8;
 }
+
+.travel-images .image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.travel-images .image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.travel-images .image-container:hover .overlay {
+  opacity: 1;
+}
+
+.travel-images .image-container .overlay span {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 
 
 figcaption {
@@ -155,10 +188,10 @@ figcaption {
   align-items: center;
 }
 .favorites h2 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #f0572b;
-  margin: 2rem 2rem;
-  text-align: left;
+  margin: 2rem 0;
+  text-align: center;
 }
 .favorites ul {
   list-style: none;
@@ -166,13 +199,17 @@ figcaption {
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
+
+.other-favorites ul li.active {
+  font-weight: bold;
+  color: #007bff; 
+}
+
 .favorites li::before {
   content: "\2713";
   margin-right: 0.5rem;
 }
-.favorites li:hover {
-  color: #f0572b;
-}
+
 .favorite-item img,
 .travel-checklist img {
   width: 100%;
@@ -263,7 +300,6 @@ footer {
   padding: 1rem 0;
 }
 
-/* Responsive Styles for Larger Screens */
 @media (min-width: 768px) {
   header {
     padding: 1.2rem;
@@ -296,7 +332,7 @@ footer {
   }
 
   .hero {
-    height: 60vh;
+    height: 54vh;
     max-width: 80%;
     margin: 0 auto;
   }
@@ -307,7 +343,11 @@ footer {
     font-size: 2rem;
     margin: 2rem;
   }
-
+  .hero-content .video-btn {
+    margin-top: 1.5rem;
+    padding: 1rem 1.8rem;
+    font-size: 1rem;
+  }
   .travel-checklist h2 {
     text-align: left;
     font-size: 2rem;
@@ -318,6 +358,7 @@ footer {
   }
   .favorites h2 {
     font-size: 2rem;
+    text-align: left;
   }
 
   .favorite-item img {
@@ -351,7 +392,7 @@ footer {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    display: none; /* Hidden by default */
+    display: none; 
     justify-content: center;
     align-items: center;
     cursor: pointer;

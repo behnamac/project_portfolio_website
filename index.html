@@ -33,7 +33,7 @@
       <div class="hero-content">
         <h1>Hi, my name is Behnam</h1>
         <p>I'm a passionate web developer</p>
-        <button class="video-btn">Watch My Video</button>
+        <button class="video-btn" onclick="window.open('https://www.youtube.com/watch?v=E7s6qjJ9p38', '_blank');">Watch My Video</button>
       </div>
     </section>
 
@@ -42,18 +42,55 @@
         Exploring the world is my passion.<br />I find joy in every journey.
       </h2>
       <div class="travel-images">
-        <img src="./assets/images/Eiffel Tower.jpg" alt="Eiffel Tower" />
-        <img src="./assets/images/Barcelona.jpg" alt="Barcelona" />
-        <img src="./assets/images/Lisbon.jpg" alt="Lisbon" />
-        <img src="./assets/images/London.jpg" alt="London" />
-        <img src="./assets/images/Prague.jpg" alt="Prague" />
-        <img src="./assets/images/Berlin.jpg" alt="Berlin" />
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1524396309943-e03f5249f002?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Eiffel Tower"
+          />
+          <div class="overlay"><span>Paris</span></div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1544918877-460635b6d13e?q=80&w=1776&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Barcelona"
+          />
+          <div class="overlay"><span>Barcelona</span></div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1562250883-39d8b01616c8?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Lisbon"
+          />
+          <div class="overlay"><span>Lisbon</span></div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="London"
+          />
+          <div class="overlay"><span>London</span></div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1541849546-216549ae216d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Prague"
+          />
+          <div class="overlay"><span>Prague</span></div>
+        </div>
+        <div class="image-container">
+          <img
+            src="https://images.unsplash.com/photo-1559564484-e48b3e040ff4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Berlin"
+          />
+          <div class="overlay"><span>Berlin</span></div>
+        </div>
       </div>
       <figcaption>
         These are the destinations I dream of visiting, each with its own unique
         charm and adventure.
       </figcaption>
     </section>
+
     <section class="favorites">
       <div class="other-favorites">
         <h2>
@@ -68,7 +105,10 @@
         </ul>
       </div>
       <div class="favorite-item" id="favoarite">
-        <img src="./assets/images/cat.jpg" alt="Cat" />
+        <img
+          src="https://images.unsplash.com/photo-1472491235688-bdc81a63246e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Cat"
+        />
         <figcaption>
           Cats are my favorites! They are cute and adorable.
         </figcaption>
@@ -87,13 +127,13 @@
         <li>
           <label>
             <input type="checkbox" name="checklist" value="travel-insurance" />
-            Travel Insurance
+            Insurance
           </label>
         </li>
         <li>
           <label>
             <input type="checkbox" name="checklist" value="comfortable-shoes" />
-            Comfortable Shoes
+            Shoes
           </label>
         </li>
         <li>
@@ -109,7 +149,7 @@
         </li>
       </ul>
       <img
-        src="./assets/images/The Plan before the Adventure.jpg"
+        src="https://images.unsplash.com/photo-1496950866446-3253e1470e8e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="travel-list"
       />
     </section>
