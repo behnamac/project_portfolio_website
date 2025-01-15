@@ -1,7 +1,7 @@
 # Project portfolio
 
 ## Description  
-**project_portfolio_website** is a responsive portfolio website built using JavaScript, CSS, and HTML. This project focuses on showcasing a clean and interactive design while implementing several features to enhance the user experience. The CSS structure follows the **BEM (Block Element Modifier)** methodology for better organization and maintainability.  
+**project_portfolio_website** is a responsive portfolio website built using JavaScript, CSS, and HTML. This project focuses on showcasing a clean and interactive design while implementing several features to enhance the user experience.
 
 The main highlights of this project include:  
 - Responsive design for seamless viewing on all devices.  
@@ -16,7 +16,6 @@ The main highlights of this project include:
 ## Features  
 - **Responsive Layout**: Ensures compatibility with desktop, tablet, and mobile screens.  
 - **JavaScript Interactivity**: Engages users with dynamic elements.  
-- **Organized CSS with BEM**: Provides a logical and modular styling approach.  
 - **User-Friendly Design**: Clean and simple interface.  
 
 ---
