@@ -26,4 +26,4 @@ The main highlights of this project include:
 ### Installation  
 1. Clone this repository:  
    ```bash  
-   git clone https://github.com/yourusername/simple_portfolio.git  
+   git clone https://github.com/behnamac/project_portfolio_website.git  
