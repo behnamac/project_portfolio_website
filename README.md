@@ -27,3 +27,23 @@ The main highlights of this project include:
 1. Clone this repository:  
    ```bash  
    git clone https://github.com/behnamac/project_portfolio_website.git  
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+    cd simple_portfolio  
+   ```
+3. Open the index.html file in your browser to view the project.
+---
+
+
+### Technologies
+
+- JavaScript – Adds interactivity and dynamic behavior to the site.
+- CSS (with BEM) – Provides organized and modular styling.
+- HTML – Lays out the structure of the website.
+
+---
+
+## License  
+This project is licensed under the [MIT License](LICENSE).  
